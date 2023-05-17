@@ -1,15 +1,15 @@
 const LIST_TYPES = {
-	BACKLOG: 'Требуют уточнения',
+	BACKLOG: 'BACKLOG',
 	READY: 'На выполение',
 	IN_PROGRESS: 'В процессе',
 	DONE: 'Готовые'
 }
 
 const LIST_COPY = {
-	[LIST_TYPES.BACKLOG]: 'Требуют уточнения',
-	[LIST_TYPES.READY]: 'Могут быть взяты в работу',
-	[LIST_TYPES.IN_PROGRESS]: 'В процессе работы',
-	[LIST_TYPES.DONE]: 'Готово'
+	[LIST_TYPES.BACKLOG]: 'Backlog',
+	[LIST_TYPES.READY]: 'Ready',
+	[LIST_TYPES.IN_PROGRESS]: 'In progress',
+	[LIST_TYPES.DONE]: 'Done'
 
 }
 

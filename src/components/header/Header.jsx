@@ -5,7 +5,7 @@ import css from './Header.module.css'
 
 const Header = () => {
     const [windowOpened, setWindowState] = useState(false)
-    function seitchProfileWindow() {
+    function switchProfileWindow() {
         setWindowState(!windowOpened)
     }
     return (
