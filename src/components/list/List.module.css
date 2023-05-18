@@ -87,6 +87,7 @@
 	margin-top: 15px;
 	display: none;
 }
+
 .addTaskBlock.opened .taskAddList{
 	display: block;
 }
@@ -96,6 +97,7 @@
 	transform-origin: 50% 50%;
 	transform: rotate(1deg);
 }
+
 .addTaskBlock.opened .taskAddArrow {
 	transform: rotate(180deg);
 }

@@ -28,7 +28,7 @@ const Footer = props => {
 
 			</div>
 			<div className={css.copy}>
-				Kanban board by &lt;Denis&gt;,&lt;2023&gt;
+				Kanban board by &lt;Denis&gt;, &lt;2023&gt;
 			</div>
 		</footer>
 		

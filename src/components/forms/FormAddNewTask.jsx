@@ -17,9 +17,7 @@ const FormAddNewTask = props => {
 		else
 		{
 			setError(true)
-			
 		}
-		
 	}
 	
 	function handleChange(event){
