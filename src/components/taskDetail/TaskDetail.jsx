@@ -71,6 +71,7 @@ const TaskDetail = props => {
 			
 			{typeof task !== 'undefined' && (
 				<>
+				fdgfgfdgfdgdfg
 					<div className={css.header}>
 						<h2 className={css.title}>{task.title}</h2>
 					

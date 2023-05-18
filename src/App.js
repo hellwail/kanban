@@ -8,7 +8,7 @@ import data from './/mock.json'
 
 function App() {
 
-  const initialState =JSON.parse(window.localStorage.getItem('tasks')) || data
+	const initialState =JSON.parse(window.localStorage.getItem('tasks')) || data
 	const [tasks, setTasks] = useState(initialState)
 	useEffect(()=>{
 		window.localStorage.setItem('tasks', JSON.stringify(tasks))
