@@ -4,7 +4,7 @@ import { LIST_COPY, LIST_TYPES } from '../../config'
 import { useLocation} from 'react-router-dom'
 import { formatDate } from '../../utils'
 import { Link } from 'react-router-dom'
-
+import { useState } from 'react'
 
 const css = {...css1, ...css2 }
 
@@ -13,6 +13,7 @@ const TaskDetail = (props) => {
 	const location = useLocation();
 	const taskId = location.pathname.split('/').pop();
 	const task = tasks.find((task) => task.id === taskId);
+	const [localDescription, setLocalDescription] = useState(task?.description || '');
   
 	function handleStatusChange(event) {
 	  const updatedTasks = tasks.map((task) =>
@@ -27,11 +28,12 @@ const TaskDetail = (props) => {
 	}
   
 	function handleDescriptionChange(event) {
-	  const updatedTasks = tasks.map((task) =>
-		task.id === taskId ? { ...task, description: event.target.value } : task
-	  );
-	  setTasksMain(updatedTasks);
-	}
+		const updatedTasks = tasks.map((task) =>
+		  task.id === taskId ? { ...task, description: event.target.value } : task
+		);
+		setTasksMain(updatedTasks);
+		setLocalDescription(event.target.value);
+	  }
   
 	return (
 	  <>
@@ -57,9 +59,10 @@ const TaskDetail = (props) => {
 			  <div className={css.descriptionCont}>
 				<span className={css.staticDescr}> Description: </span>
 				<textarea
-				  className={css.editableDescr}
-				  onBlur={handleDescriptionChange}
-				  value={task.description || 'empty'}
+  					className={css.editableDescr}
+  					onBlur={handleDescriptionChange}
+ 					onChange={(event) => setLocalDescription(event.target.value)}
+  					value={localDescription}
 				/>
 			  </div>
 			  <p className={css.label}>change status</p>
