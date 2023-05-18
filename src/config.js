@@ -1,8 +1,8 @@
 const LIST_TYPES = {
 	BACKLOG: 'BACKLOG',
-	READY: 'На выполение',
-	IN_PROGRESS: 'В процессе',
-	DONE: 'Готовые'
+	READY: 'READY',
+	IN_PROGRESS: 'IN PROGRESS',
+	DONE: 'DONE'
 }
 
 const LIST_COPY = {

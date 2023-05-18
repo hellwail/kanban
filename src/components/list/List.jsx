@@ -10,8 +10,6 @@ const List = props => {
 	const { title, type, tasks, addNewTask,  previousTasks, allTasks, setTasksMain } = props
 	const [isFormVisible, setFormVisible1] = useState(false)
 	const [errorTrigered, setError] = useState(false)
-	
-
 
 	function addTaskClick() {
 		setFormVisible1(!isFormVisible)
@@ -47,7 +45,6 @@ const List = props => {
 	}
 
 	function changeTaskCategory(e, taskId) {
-
 		const updatedTasks = allTasks.map(task => {
 			if (taskId === task.id) {
 				return { ...task, status: type }
