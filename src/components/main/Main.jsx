@@ -12,6 +12,7 @@ const Main = props => {
 				
 			
 		</Routes>
+		
 		</main>
 	)
 }

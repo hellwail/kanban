@@ -9,6 +9,7 @@ const Footer = props => {
 	const currentUrl = window.location.href;
 	console.log(currentUrl)
 	console.log(tasks)
+	
 	tasks.map( (task) => {	
 		if( task.status === LIST_TYPES.IN_PROGRESS || task.status === LIST_TYPES.READY ){
 			inProgressTasks++
