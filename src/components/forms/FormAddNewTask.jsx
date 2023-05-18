@@ -34,7 +34,7 @@ const FormAddNewTask = props => {
 				id='taskTitle'
 				name='title'
 				type='text'
-				placeholder='Название задачи'
+				placeholder='title'
 				value={values.title}
 				onChange={handleChange}
 			/>
@@ -42,11 +42,11 @@ const FormAddNewTask = props => {
 				className={clsx(css.input, css.textarea)}
 				id='taskDescription'
 				name='description'
-				placeholder='Описание задачи'
+				placeholder='description'
 				value={values.description}
 				onChange={handleChange}
 			/>
-			<button className={css.submit} type='submit'>Добавить</button>
+			<button className={css.submit} type='submit'>Add</button>
 		</form>
 	)
 }

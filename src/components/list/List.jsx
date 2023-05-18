@@ -99,7 +99,7 @@ const List = props => {
 				<FormAdddNewTask addNewTask={addNewTask} setFormVisible1={setFormVisible1} setError={setError} />
 			)}
 			{type === LIST_TYPES.BACKLOG && errorTrigered === true && (
-				<label className={css.errorLabel} htmlFor="">Введите имя задачи</label>
+				<label className={css.errorLabel} htmlFor="">Enter the task name</label>
 			)}
 
 		</div>

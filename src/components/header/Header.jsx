@@ -15,11 +15,11 @@ const Header = () => {
                 <p className={css.userName}>
                 <div className={css.logoImageBlock}>
                     <img className={css.logo} src={Logo} alt='Logo' />
-                    <span className={classNames(css.logoArrow, windowOpened?css.reverted:'')}>&or; </span>
+                    <span className={classNames(css.logoArrow, windowOpened?css.reverted:'')}  onClick = {switchProfileWindow} >&or; </span>
                 </div>
                 <div className={classNames(css.userActions, windowOpened?css.opened:'')}>					
-					<div className={classNames(css.profile, css.userActionItem)}>Профиль</div>
-					<div className={classNames(css.logout, css.userActionItem)}>Выйти</div>
+					<div className={classNames(css.profile, css.userActionItem)}>Profile</div>
+					<div className={classNames(css.logout, css.userActionItem)}>Exit</div>
 				</div>
                 </p>
             </div>

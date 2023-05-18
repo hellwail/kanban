@@ -8,9 +8,7 @@ const Main = props => {
 		<main className={css.main} >
 		<Routes>
 			<Route exact path={'/'} element = { <Board {...props} />}/>
-				
-				
-			<Route path={'/tasks/:taskId'} element = { <TaskDetail  {...props}/>}/>
+			<Route path={'/tasks/:taskId'} element = { <TaskDetail {...props}/>}/>
 				
 			
 		</Routes>

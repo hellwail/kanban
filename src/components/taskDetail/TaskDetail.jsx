@@ -18,42 +18,8 @@ const TaskDetail = props => {
 	const task = tasks.find(task => task.id === taskId)
 	let btnGroupClasses;
 	console.log(task)
-	if(task){		
-		switch (LIST_COLORS[task.status]) {
-			case 'BACKLOG':
-				btnGroupClasses = classNames(
-					css.status,
-					css.BACKLOG
-				);
-				break;
-			case 'READY':
-				btnGroupClasses = classNames(
-					css.status,
-					css.READY
-				);
-				break;
-			case 'IN_PROGRESS':
-				btnGroupClasses = classNames(
-					css.status,
-					css.IN_PROGRESS
-				);
-				break;
-			case 'DONE':
-				btnGroupClasses = classNames(
-					css.status,
-					css.DONE
-				);
-				break;
-			default:
-				break;
-		}
-	}
-	else
-	{
-		//task.status = 'not_found'
-	}
-
-
+	
+	
 	function handleStatusChange(event) {
 		const updatedTasks = tasks.map(task => {
 			if (taskId === task.id) {
@@ -96,7 +62,7 @@ const TaskDetail = props => {
 	return (
 		<>
 		<div className={css.statusRow}>
-				<Link to='/' className={css.homeLink}> &#8592; Назад</Link>
+				<Link to='/' className={css.homeLink}> &#8592; Back</Link>
 				{typeof task !== 'undefined' && ( 
 				<div className={btnGroupClasses} style={{ }}>{LIST_COPY[task.status]}</div> 
 				)}
@@ -111,22 +77,22 @@ const TaskDetail = props => {
 					</div>
 					<div className={css.createdAt}>{formatDate(task.created)}</div>
 					<div className={css.descriptionCont}>
-						<span className={css.staticDescr}> Описание задачи: </span>
-						<textarea className={css.editableDescr} onBlur={handleDescriptionChange} >{task.description || "не заполнено"}</textarea>
+						<span className={css.staticDescr}> Description: </span>
+						<textarea className={css.editableDescr} onBlur={handleDescriptionChange} >{task.description || "empty"}</textarea>
 					</div>
-					<p className={css.label}>Изменить статус</p>
+					<p className={css.label}>change status</p>
 					<select onChange={handleStatusChange} className={css.select} value={task.status} name="" id="">
 						{Object.values(LIST_TYPES).map(type => {
 							return <option key={type} value={type}>{type}</option>
 						})}
 
 					</select>
-					<button onClick={deleteTask} className={css.deleteBtn}>Удалить задачу</button>
+					<button onClick={deleteTask} className={css.deleteBtn}>Delete task</button>
 				</>
 			)}
 			{typeof task === 'undefined' && (
 				<h2>
-					Задача с ID = {taskId} не найдена
+					Task with ID = {taskId} not found
 				</h2>
 			)}
 

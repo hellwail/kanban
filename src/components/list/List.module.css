@@ -42,7 +42,7 @@
 
 .errorLabel {
 	display: block;
-	background: #b95959;
+	background: #523838;
 	padding: 1em;
 	color: white;
 	border-radius: 4px;
@@ -50,7 +50,7 @@
 }
 
 .BACKLOG {
-	background: #b95959;
+	background: #b523b5;
 }
 
 .BACKLOG:hover {
@@ -58,7 +58,7 @@
 }
 
 .READY {
-	background: #9393e8;
+	background: #4f4f75;
 }
 
 .READY:hover {
@@ -66,7 +66,7 @@
 }
 
 .IN_PROGRESS {
-	background: #4b69b1;
+	background: #6da7d6;
 }
 
 .IN_PROGRESS:hover {
@@ -74,11 +74,11 @@
 }
 
 .DONE {
-	background: #a0b959;
+	background: #2eaa70;
 }
 
 .DONE:hover {
-	background: #89a636;
+	background: #226946;
 }
 
 .taskAddList {
