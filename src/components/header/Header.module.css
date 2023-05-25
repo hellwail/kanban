@@ -33,6 +33,7 @@
 	transform: rotate(1deg);
 	cursor: pointer;
 	display: inline-block;
+	text-align: center;
 }
 .logoArrow.reverted{
 	transform: rotate(180deg);
@@ -54,7 +55,7 @@
 	visibility: visible;
 	opacity: 1;
 }
-.logoImageblock{
+.logoImageBlock{
 	display: flex;
 	align-items: center;
 	cursor: pointer;

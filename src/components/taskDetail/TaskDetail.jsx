@@ -5,6 +5,7 @@ import { useLocation} from 'react-router-dom'
 import { formatDate } from '../../utils'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const css = {...css1, ...css2 }
 
@@ -14,7 +15,8 @@ const TaskDetail = (props) => {
 	const taskId = location.pathname.split('/').pop();
 	const task = tasks.find((task) => task.id === taskId);
 	const [localDescription, setLocalDescription] = useState(task?.description || '');
-  
+	const navigate = useNavigate();
+
 	function handleStatusChange(event) {
 	  const updatedTasks = tasks.map((task) =>
 		task.id === taskId ? { ...task, status: event.target.value } : task
@@ -23,9 +25,10 @@ const TaskDetail = (props) => {
 	}
   
 	function deleteTask(event) {
-	  const newTasks = tasks.filter((task1) => task1.id !== taskId);
-	  setTasksMain(newTasks);
-	}
+		const newTasks = tasks.filter((task1) => task1.id !== taskId);
+		setTasksMain(newTasks);
+		navigate('/');
+	  }
   
 	function handleDescriptionChange(event) {
 		const updatedTasks = tasks.map((task) =>
